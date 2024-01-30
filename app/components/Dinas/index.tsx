@@ -12,7 +12,7 @@ const dinasdata: dinasdata[] = [
     {
         imgSrc: '/images/Dinas/icon-one.svg',
         heading: 'Dinas Akademik',
-        subheading: 'Dinas Akademik merupakan dinas paling gacor. Dinas ini berperan untuk mengembangkan ilmu pengetahuan dan teknologi di jurusan Teknik Informatika.',
+        subheading: 'Dinas Akademik merupakan dinas paling gacor.',
         hiddenpara: 'Dinas ini bertanggung jawab untuk memfasilitasi dan mendukung kegiatan akademik, seperti mentoring, seminar, pengembangan web, dan lainnya.',
     },
     {
