@@ -11,7 +11,7 @@ interface faqdata {
 const faqdata: faqdata[] = [
     {
         heading: "1. Apa itu HMIF UNSRI?",
-        subheading: 'HMIF UNSRI adalah organisasi kemahasiswaan yang bergerak di bidang teknik informatika, yang bertujuan untuk meningkatkan kualitas akademik, non-akademik, dan kekeluargaan mahasiswa Teknik Informatika FASILKOM UNSRI, serta berkontribusi untuk pengembangan ilmu pengetahuan dan teknologi di Indonesia.'
+        subheading: 'HMIF UNSRI adalah organisasi kemahasiswaan yang bergerak di bidang teknologi informasi dan kemahasiswaan, yang bertujuan untuk meningkatkan kualitas akademik, nonakademik, dan kekeluargaan mahasiswa Teknik Informatika FASILKOM UNSRI, serta berkontribusi untuk pengembangan ilmu pengetahuan dan teknologi di Indonesia.'
     },
     {
         heading: "2. Bagaimana cara masuk HMIF UNSRI?",
@@ -27,7 +27,7 @@ const faqdata: faqdata[] = [
 const Faq = () => {
     return (
         <div className="my-20 px-6" id="faq-section">
-            <h3 className="text-center text-3xl lg:text-5xl font-bold text-offwhite mb-3">Frequently Asked And Question</h3>
+            <h3 className="text-center text-3xl lg:text-5xl font-bold text-offwhite mb-3">Frequently Asked Question</h3>
             <p className="text-center lg:text-lg font-normal text-bluish">Daftar pertanyaan dan jawaban yang sering muncul.</p>
 
             <div className="mx-auto max-w-7xl">
