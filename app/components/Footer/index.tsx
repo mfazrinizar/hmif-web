@@ -98,7 +98,7 @@ const footer = () => {
       {/* All Rights Reserved */}
 
       <div className='py-8 px-4 border-t border-t-lightblue'>
-        <h3 className='text-center text-offwhite'>@2023 - <Link href="https://mfazrinizar.github.io/" target="_blank"> M. Fazri Nizar</Link></h3>
+        <h3 className='text-center text-offwhite'>@2024 - <Link href="https://mfazrinizar.github.io/" target="_blank"> M. Fazri Nizar</Link></h3>
       </div>
 
     </div>

@@ -26,7 +26,7 @@ const faqdata: faqdata[] = [
 
 const Faq = () => {
     return (
-        <div className="my-20 px-6" id="faq-section">
+        <div className="my-20 px-6 pt-28" id="faq-section">
             <h3 className="text-center text-3xl lg:text-5xl font-bold text-offwhite mb-3">Frequently Asked Questions</h3>
             <p className="text-center lg:text-lg font-normal text-bluish">Daftar pertanyaan dan jawaban yang sering muncul.</p>
 

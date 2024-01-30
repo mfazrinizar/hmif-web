@@ -57,7 +57,7 @@ const dinasdata: dinasdata[] = [
 const Dinas = () => {
     return (
         <div>
-            <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative' id="dinas-section">
+            <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative pt-28' id="dinas-section">
                 <div className="radial-bgone hidden lg:block"></div>
                 <div className='text-center mb-14'>
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>Dinas</h3>

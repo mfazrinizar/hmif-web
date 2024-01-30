@@ -10,28 +10,28 @@ interface Data {
 
 const data: Data[] = [
     {
-        imgSrc: "/images/Sponsors/pertamina-white.png"
+        imgSrc: "/images/Sponsors/pertamina.svg"
     },
     {
-        imgSrc: "/images/Sponsors/pertamina-white.png"
+        imgSrc: "/images/Sponsors/pertamina.svg"
     },
     {
-        imgSrc: "/images/Sponsors/pertamina-white.png"
+        imgSrc: "/images/Sponsors/pertamina.svg"
     },
     {
-        imgSrc: "/images/Sponsors/pertamina-white.png"
+        imgSrc: "/images/Sponsors/pertamina.svg"
     },
     {
-        imgSrc: "/images/Sponsors/pertamina-white.png"
+        imgSrc: "/images/Sponsors/pertamina.svg"
     },
     {
-        imgSrc: "/images/Sponsors/pertamina-white.png"
+        imgSrc: "/images/Sponsors/pertamina.svg"
     },
     {
-        imgSrc: "/images/Sponsors/pertamina-white.png"
+        imgSrc: "/images/Sponsors/pertamina.svg"
     },
     {
-        imgSrc: "/images/Sponsors/pertamina-white.png"
+        imgSrc: "/images/Sponsors/pertamina.svg"
     },
 ]
 
@@ -81,14 +81,17 @@ export default class MultipleItems extends Component {
         };
 
         return (
-            <div className='text-center bg-lightpink' >
+            <div className='text-center bg-lightpink mt-56' >
+                <div className='text-center mb-1'>
+                    <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>Sponsors & Partners</h3>
+                </div>
                 <div className="mx-auto max-w-2xl py-16 px-4s sm:px-6 lg:max-w-7xl lg:px-8">
                     <div>
                         <Slider {...settings}>
                             {data.map((item, i) =>
                                 <div key={i}>
                                     <div>
-                                        <Image src={item.imgSrc} alt={item.imgSrc} width={500} height={300} />
+                                        <Image src={item.imgSrc} alt={item.imgSrc} width={128} height={128} />
                                     </div>
                                 </div>
                             )}

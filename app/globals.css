@@ -31,6 +31,14 @@ html:not([data-scroll="0"]) .navbar {
   z-index: 40;
 }
 
+html[data-scroll="100"] .navbar {
+  opacity: 1;
+}
+
+.navbar {
+  transition: opacity 0.4s linear;
+}
+
 .drawer-gradient {
   background: linear-gradient(90deg, #151515 97.15%, #BD24DF 5%);
 }

@@ -25,7 +25,15 @@ const Navbarin: React.FC = () => {
         // Reads out the scroll position and stores it in the data attribute
         // so we can use it in our stylesheets
         const storeScroll = () => {
-            document.documentElement.dataset.scroll = window.scrollY.toString();
+            // document.documentElement.dataset.scroll = window.scrollY.toString();
+            const scrollPosition = window.scrollY;
+            const windowHeight = window.innerHeight;
+            const docHeight = document.documentElement.scrollHeight;
+        
+            const totalDocScrollLength = docHeight - windowHeight;
+            const scrollPostionPercentage = Math.floor((scrollPosition / totalDocScrollLength) * 50);
+        
+            document.documentElement.dataset.scroll = scrollPostionPercentage.toString();
         }
 
         // Listen for new scroll events, here we debounce our `storeScroll` function
