@@ -14,6 +14,12 @@ body {
   background-blend-mode: overlay;
 }
 
+@media (max-width: 1024px) {
+  body {
+    background-blend-mode: color-dodge;
+  }
+}
+
 html {
   scroll-behavior: smooth !important;
 }
