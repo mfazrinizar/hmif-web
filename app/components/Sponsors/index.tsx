@@ -85,11 +85,13 @@ export default class MultipleItems extends Component {
                 <div className="mx-auto max-w-2xl py-16 px-4s sm:px-6 lg:max-w-7xl lg:px-8">
                     <div>
                         <Slider {...settings}>
-                            {(data.map((item, i) =>
+                            {data.map((item, i) =>
                                 <div key={i}>
-                                    <Image src={item.imgSrc} alt={item.imgSrc} width={500} height={300} />
+                                    <div>
+                                        <Image src={item.imgSrc} alt={item.imgSrc} width={500} height={300} />
+                                    </div>
                                 </div>
-                            ) as React.ReactNodeArray)}
+                            )}
                         </Slider>
                     </div>
                 </div>
