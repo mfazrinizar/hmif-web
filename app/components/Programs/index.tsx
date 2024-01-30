@@ -35,7 +35,7 @@ const Programs = () => {
                     <div>
                         <h3 className="feature-font text-lg font-semibold mb-4 text-center md:text-start">Program Unggulan</h3>
                         <h2 className="text-offwhite text-3xl lg:text-5xl font-semibold leading-snug mb-6 text-center md:text-start">Program Unggulan yang Menjadi Fondasi Berjalannya Organisasi</h2>
-                        <p className="lg:text-lg font-normal text-bluish text-center md:text-start">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s.</p>
+                        <p className="lg:text-lg font-normal text-bluish text-center md:text-start">Program yang menjadi fondasi dan esensi dalam berjalannya organisasi.</p>
                     </div>
                     {/* Column-2 */}
                     <div>
