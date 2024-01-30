@@ -10,43 +10,43 @@ interface dinasdata {
 
 const dinasdata: dinasdata[] = [
     {
-        imgSrc: '/images/Work/icon-one.svg',
+        imgSrc: '/images/Dinas/icon-one.svg',
         heading: 'Dinas Akademik',
         subheading: 'Dinas Akademik merupakan dinas paling gacor. Dinas ini berperan untuk mengembangkan ilmu pengetahuan dan teknologi di jurusan Teknik Informatika.',
         hiddenpara: 'Dinas ini bertanggung jawab untuk memfasilitasi dan mendukung kegiatan akademik, seperti mentoring, seminar, pengembangan web, dan lainnya.',
     },
     {
-        imgSrc: '/images/Work/icon-one.svg',
+        imgSrc: '/images/Dinas/icon-one.svg',
         heading: 'Dinas KOMINFO',
         subheading: 'Dinas KOMINFO bertanggung jawab untuk mengelola dan menyebarkan informasi terkait kegiatan dan program.',
         hiddenpara: 'Dinas ini juga mengelola media dan platform komunikasi, seperti website, media sosial, dan aplikasi mobile.',
     },
     {
-        imgSrc: '/images/Work/icon-one.svg',
+        imgSrc: '/images/Dinas/icon-one.svg',
         heading: 'Dinas PSDM',
         subheading: 'Dinas PSDM berfokus pada pengembangan sumber daya manusia dalam organisasi.',
         hiddenpara: 'Dinas ini mengelola rekrutmen, pelatihan, dan pengembangan keterampilan anggota organisasi.',
     },
     {
-        imgSrc: '/images/Work/icon-one.svg',
+        imgSrc: '/images/Dinas/icon-one.svg',
         heading: 'Dinas Administrasi',
         subheading: 'Dinas Administrasi mengelola tugas administratif dan operasional organisasi.',
         hiddenpara: 'Dinas ini bertanggung jawab untuk pencatatan, dokumentasi, dan pengelolaan sumber daya organisasi.',
     },
     {
-        imgSrc: '/images/Work/icon-one.svg',
+        imgSrc: '/images/Dinas/icon-one.svg',
         heading: 'Dinas Kastrad',
         subheading: 'Dinas Kastrad bertanggung jawab untuk strategi dan perencanaan dalam organisasi.',
         hiddenpara: 'Dinas ini mengelola perencanaan strategis, analisis, dan evaluasi program dan kegiatan.',
     },
     {
-        imgSrc: '/images/Work/icon-one.svg',
+        imgSrc: '/images/Dinas/icon-one.svg',
         heading: 'Dinas PMB',
         subheading: 'Dinas PMB mengelola kegiatan penerimaan mahasiswa baru dan orientasi.',
         hiddenpara: 'Dinas ini bertanggung jawab untuk menyambut dan mengintegrasikan mahasiswa baru ke dalam komunitas.',
     },
     {
-        imgSrc: '/images/Work/icon-one.svg',
+        imgSrc: '/images/Dinas/icon-one.svg',
         heading: 'Dinas Kewirausahaan',
         subheading: 'Dinas Kewirausahaan berfokus pada pengembangan kewirausahaan dan inovasi bisnis.',
         hiddenpara: 'Dinas ini mengelola program dan kegiatan yang mendukung kewirausahaan dan inovasi bisnis di kalangan mahasiswa.',
