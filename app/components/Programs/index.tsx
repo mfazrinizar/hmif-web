@@ -9,17 +9,17 @@ interface programsdata {
 
 const programsdata: programsdata[] = [
     {
-        imgSrc: '/images/programs/programOne.svg',
+        imgSrc: '/images/program/programOne.svg',
         heading: 'Mentoring Pemrograman',
         subheading: 'Membantu mahasiswa baru memahami pemrograman dasar.',
     },
     {
-        imgSrc: '/images/programs/programTwo.svg',
+        imgSrc: '/images/program/programTwo.svg',
         heading: 'Srifoton',
         subheading: 'Mewadahi kreativitas, inovasi, dan kemampuan akademik mahasiswa di bidang teknologi informasi.',
     },
     {
-        imgSrc: '/images/programs/programThree.svg',
+        imgSrc: '/images/program/programThree.svg',
         heading: 'IF Cup',
         subheading: 'Mewadahi sportivitas dan kreativitas mahasiswa di bidang olahraga.',
     },
