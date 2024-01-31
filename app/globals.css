@@ -168,7 +168,7 @@ html[data-scroll="100"] .navbar {
   display: none;
 }
 
-.card-b:hover > .hides {
+.card-b:hover>.hides {
   display: block;
 }
 
@@ -323,6 +323,10 @@ html[data-scroll="100"] .navbar {
   color: #fff;
   justify-content: center;
   align-items: center;
+}
+
+.flex {
+  flex-wrap: wrap;
 }
 
 .hover-underline:after {
