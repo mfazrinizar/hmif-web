@@ -36,6 +36,9 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
                                 src={'/images/Logo/logo.png'}
                                 alt="HMIF-Logo"
                             />
+                            <span className="ml-3 text-white text-lg lg:text-2xl font-bold">
+                                HMIF UNSRI
+                            </span>
                         </div>
 
                         <XMarkIcon className="block h-6 w-6 text-white" onClick={() => {

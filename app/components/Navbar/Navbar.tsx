@@ -24,8 +24,23 @@ function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
-const Navbar = () => {
+function useViewportWidth() {
+    const [width, setWidth] = React.useState<number | undefined>(undefined);
 
+    React.useEffect(() => {
+        if (typeof window !== 'undefined') {
+            const handleResize = () => setWidth(window.innerWidth);
+            window.addEventListener('resize', handleResize);
+            handleResize();
+            return () => window.removeEventListener('resize', handleResize);
+        }
+    }, []);
+
+    return width;
+}
+
+const Navbar = () => {
+    const viewportWidth = useViewportWidth();
     const [isOpen, setIsOpen] = React.useState(false);
 
     return (
@@ -52,6 +67,9 @@ const Navbar = () => {
                                     width={96}
                                     height={96}
                                 />
+                                <Link href="#section-home" className="ml-3 text-white text-lg lg:text-2xl font-bold">
+                                    HMIF UNSRI
+                                </Link>
                             </div>
 
                             {/* LINKS */}

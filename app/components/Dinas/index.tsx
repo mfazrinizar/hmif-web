@@ -79,13 +79,10 @@ const Dinas = () => {
                             <span className="text-base font-normal m-0 text-bluish text-center hides">{items.hiddenpara}</span>
                         </div>
                     ))}
-
                 </div>
-
             </div>
             <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
         </div>
-        
     )
 }
 

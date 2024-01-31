@@ -146,7 +146,7 @@ html[data-scroll="100"] .navbar {
   z-index: -1;
 }
 
-/* Work Section */
+/* Dinas Section */
 
 .card-b {
   background: #0C1B44;
@@ -175,7 +175,7 @@ html[data-scroll="100"] .navbar {
 .dinas-img-bg {
   background: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%);
   top: -51px;
-  right: 40%;
+  right: 37%;
 }
 
 /* Table Section */
