@@ -67,7 +67,7 @@ const Navbar = () => {
                                     width={96}
                                     height={96}
                                 />
-                                <Link href="#section-home" className="ml-3 text-white text-lg lg:text-2xl font-bold">
+                                <Link href="#section-home" className="ml-3 text-white text-lg lg:text-2xl font-semibold">
                                     HMIF UNSRI
                                 </Link>
                             </div>

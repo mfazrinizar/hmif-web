@@ -48,15 +48,25 @@ const footer = () => {
           {/* COLUMN-1 */}
 
           <div className='col-span-6'>
-            <img
+            <Image
               className="block h-12 w-20px mb-4"
-              src={'/images/Logo/logo.png'}
+              src="/images/Logo/logo.png"
               alt="HMIF-Logo"
+              width={48}
+              height={48}
             />
             <h3 className='text-lightblue text-sm font-normal leading-9 mb-4 lg:mb-16'> HMIF UNSRI adalah organisasi kemahasiswaan yang bergerak di bidang teknik informatika, yang bertujuan untuk meningkatkan kualitas akademik, non-akademik, dan kekeluargaan mahasiswa Teknik Informatika FASILKOM UNSRI, serta berkontribusi untuk pengembangan ilmu pengetahuan dan teknologi di Indonesia.</h3>
             <div className='flex gap-4'>
               {socialLinks.map((items, i) => (
-                <Link href={items.href} key={i}><img src={items.imgsrc} alt={items.imgsrc} className='footer-icons' /></Link>
+                <Link href={items.href} key={i}>
+                    <Image
+                      src={items.imgsrc}
+                      alt={items.imgsrc}
+                      className='footer-icons'
+                      width={24}
+                      height={24}
+                    />
+                </Link>
               ))}
             </div>
           </div>

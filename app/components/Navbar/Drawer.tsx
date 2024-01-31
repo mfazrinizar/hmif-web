@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { XMarkIcon } from '@heroicons/react/24/outline'
+import Image from 'next/image';
 import Link from "next/link";
 
 
@@ -31,12 +32,14 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
                     <header className="px-4 py-4 flex items-center justify-between">
 
                         <div className="flex flex-shrink-0 items-center">
-                            <img
+                            <Image
                                 className="block h-10 lg:hidden"
-                                src={'/images/Logo/logo.png'}
+                                src="/images/Logo/logo.png"
                                 alt="HMIF-Logo"
+                                width={48}
+                                height={48}
                             />
-                            <span className="ml-3 text-white text-lg lg:text-2xl font-bold">
+                            <span className="ml-3 text-white text-lg lg:text-2xl font-semibold">
                                 HMIF UNSRI
                             </span>
                         </div>
