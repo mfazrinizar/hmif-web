@@ -47,7 +47,7 @@ const dinasdata: dinasdata[] = [
     },
     {
         imgSrc: '/images/Dinas/icon-one.svg',
-        heading: 'Dinas Kewirausahaan',
+        heading: 'Dinas KWU',
         subheading: 'Dinas Kewirausahaan berfokus pada pengembangan dan inovasi kewirausahaan.',
         hiddenpara: 'Dinas ini mengelola program dan kegiatan yang mendukung kewirausahaan dan inovasi bisnis di kalangan mahasiswa.',
     },
