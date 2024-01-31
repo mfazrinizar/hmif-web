@@ -174,9 +174,12 @@ html[data-scroll="100"] .navbar {
 
 .dinas-img-bg {
   background: linear-gradient(90deg, #BD24DF 0%, #2D6ADE 97.15%);
+  position: absolute; 
   top: -51px;
-  right: 36.5%;
-  
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 25%;
 }
 
 /* Table Section */
