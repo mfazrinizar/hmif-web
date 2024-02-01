@@ -21,6 +21,14 @@ export default function Home() {
   //   }, 0);
   // },);
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const loader = document.getElementById('globalLoader');
+      if (loader)
+        loader.remove();
+    }
+  }, []);
+
 
   return (
     <main>
