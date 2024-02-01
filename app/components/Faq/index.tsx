@@ -27,7 +27,8 @@ const faqdata: faqdata[] = [
 
 ]
 
-function useItemInView() {
+const FaqItem = ({ item }: { item: faqdata }) => {
+
     const { ref, inView } = useInView({ triggerOnce: true });
     const controls = useAnimation();
 
@@ -40,12 +41,6 @@ function useItemInView() {
             });
         }
     }, [controls, inView]);
-
-    return { ref, controls };
-}
-
-const FaqItem = ({ item }: { item: faqdata }) => {
-    const { ref, controls } = useItemInView();
 
     return (
         <motion.div ref={ref} animate={controls} initial={{ y: -100, opacity: 0 }}>
@@ -71,9 +66,9 @@ const FaqItem = ({ item }: { item: faqdata }) => {
 
 const Faq = () => {
 
-    const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true });
-    const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true });
-    const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true });
+    const { ref: ref1, inView: inView1 } = useInView({ triggerOnce: true, threshold: 0.1, });
+    const { ref: ref2, inView: inView2 } = useInView({ triggerOnce: true, threshold: 0.1, });
+    const { ref: ref3, inView: inView3 } = useInView({ triggerOnce: true, threshold: 0.1, });
 
     const controls1 = useAnimation();
     const controls2 = useAnimation();
@@ -117,13 +112,13 @@ const Faq = () => {
             <div className="mx-auto max-w-7xl">
                 <div className="grid lg:grid-cols-2">
                     {/* Column-1 */}
-                    <motion.div ref={ref2} animate={controls2} initial={{ x: -100, opacity: 0 }}>
-                        <div className="w-full px-4 pt-16">
-                            {faqdata.map((item, i) => (
-                                <FaqItem item={item} key={i} />
-                            ))}
-                        </div>
-                    </motion.div>
+
+                    <div className="w-full px-4 pt-16">
+                        {faqdata.map((item, i) => (
+                            <FaqItem item={item} key={i} />
+                        ))}
+                    </div>
+
 
                     {/* Column-2 */}
                     <motion.div ref={ref3} animate={controls3} initial={{ y: 100, opacity: 0 }} className="mt-32">
