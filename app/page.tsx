@@ -1,3 +1,6 @@
+'use client';
+import { useEffect } from 'react';
+
 import Banner from './components/Banner/index';
 import Sponsors from './components/Sponsors/index';
 import Dinas from './components/Dinas/index';
@@ -8,6 +11,17 @@ import Faq from './components/Faq/index';
 
 
 export default function Home() {
+  useEffect(() => {
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'instant' as any,
+      })
+    }, 0);
+  },);// Adjust the delay as needed
+
+
   return (
     <main>
       <Banner />

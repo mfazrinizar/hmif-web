@@ -1,5 +1,9 @@
+'use client';
 import Image from "next/image";
 import Link from "next/link";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 // MIDDLE LINKS DATA
 interface LinkType {
@@ -38,9 +42,29 @@ const socialLinks: Social[] = [
 ]
 
 
-const footer = () => {
+const Footer = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+
   return (
-    <div className=" relative">
+    <motion.div
+      className="relative"
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      transition={{ duration: 1 }}
+      variants={{
+        visible: { opacity: 1, scale: 1 },
+        hidden: { opacity: 0, scale: 0.75 }
+      }}
+    >
       <div className="radial-bg hidden lg:block"></div>
       <div className="mx-auto max-w-2xl mt-64 pb-16 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="mt-24 grid grid-cols-1 gap-y-10 gap-x-16 sm:grid-cols-2 lg:grid-cols-12 xl:gap-x-8">
@@ -59,13 +83,13 @@ const footer = () => {
             <div className='flex gap-4'>
               {socialLinks.map((items, i) => (
                 <Link href={items.href} key={i}>
-                    <Image
-                      src={items.imgsrc}
-                      alt={items.imgsrc}
-                      className='footer-icons'
-                      width={24}
-                      height={24}
-                    />
+                  <Image
+                    src={items.imgsrc}
+                    alt={items.imgsrc}
+                    className='footer-icons'
+                    width={24}
+                    height={24}
+                  />
                 </Link>
               ))}
             </div>
@@ -110,9 +134,8 @@ const footer = () => {
       <div className='py-8 px-4 border-t border-t-lightblue'>
         <h3 className='text-center text-offwhite'>@2024 - <Link href="https://mfazrinizar.github.io/" target="_blank"> M. Fazri Nizar</Link></h3>
       </div>
-
-    </div>
+    </motion.div>
   )
 }
 
-export default footer;
+export default Footer;

@@ -2,12 +2,31 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const Banner = () => {
     const [isOpen, setOpen] = useState(false)
 
+    const variants = {
+        hidden: { y: 100, opacity: 0 },
+        visible: { y: 0, opacity: 1 },
+    };
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
     return (
-        <div className='bg-image relative' id="home-section">
+
+        <motion.div
+            className='bg-image relative'
+            id="home-section"
+            initial={{ opacity: 0, scale: 0.75 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ ease: "easeOut", duration: 1.25 }}
+        >
             <div className='arrowOne'></div>
             <div className='radial-banner hidden lg:block'></div>
             <ModalVideo channel='youtube' isOpen={isOpen} videoId="bynoWLAUCvY" onClose={() => setOpen(false)} />
@@ -21,7 +40,13 @@ const Banner = () => {
                                 <div className='arrowThree'></div>
                                 <div className='arrowFour'></div>
                                 <div className='arrowFive'></div>
-                                <Image src="/images/Banner/banner.svg" alt="nothing" width={512} height={512} />
+                                <Image
+                                    src="/images/Banner/banner.svg"
+                                    alt="nothing"
+                                    width={512}
+                                    height={512}
+                                    className="mt-[-95px] lg:mt-0"
+                                />
                                 <div className='arrowSix'></div>
                                 <div className='arrowSeven'></div>
                                 <div className='arrowEight'></div>
@@ -31,20 +56,35 @@ const Banner = () => {
                                 Himpunan Mahasiswa Informatika UNSRI
                             </h1>
                             <p className='text-white md:text-lg font-normal mb-10 md:text-start text-center'>Sebuah wadah untuk menampung dan mengeksekusi aspirasi warga Teknik Informatika.</p>
-                            <div className='flex align-middle justify-center md:justify-start'>
+                            <div className='flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 align-middle justify-center md:justify-start'>
                                 <button
-                                    className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton mr-6'
-                                    onClick={() => window.location.href = 'https://oprec.hmifunsri.com/daftar'}
+                                    className='text-xl font-semibold text-white py-4 px-6 lg:px-12 navbutton'
+                                    onClick={() => window.location.href = 'https://oprec.hmifunsri.com'}
                                 >
                                     Daftar Sekarang
                                 </button>
-                                <button onClick={() => setOpen(true)} className='bg-transparent flex justify-center items-center text-white'><Image src={'/images/Banner/playbutton.svg'} alt="button-image" className='mr-3' width={47} height={47} />Profil</button>
+                                <button onClick={() => setOpen(true)} className='bg-transparent flex justify-center items-center text-white'>
+                                    <Image src={'/images/Banner/playbutton.svg'} alt="button-image" className='mr-3' width={47} height={47} />
+                                    Profil
+                                </button>
+                            </div>
+                            <div ref={ref} style={{ marginTop: '20px' }}>
+                                {inView && (
+                                    <motion.div
+                                        variants={variants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        transition={{ duration: 1 }}
+                                    >
+                                        <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
+                                    </motion.div>
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

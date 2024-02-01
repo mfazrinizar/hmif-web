@@ -1,5 +1,7 @@
 "use client"
+import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { useInView } from 'react-intersection-observer';
 
 interface dinasdata {
     imgSrc: string;
@@ -54,34 +56,90 @@ const dinasdata: dinasdata[] = [
 
 ]
 
+interface DinasItemProps {
+    item: dinasdata;
+    index: number;
+}
+
+const DinasItem: React.FC<DinasItemProps> = ({ item, index }) => {
+    const variants = {
+        hidden: { opacity: 0, x: -250 },
+        show: { opacity: 1, x: 0 },
+    };
+
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
+    return (
+        <motion.div
+            className='card-b p-8'
+            key={index}
+            ref={ref}
+            variants={variants}
+            initial="hidden"
+            animate={inView ? "show" : "hidden"}
+            transition={{ duration: 0.5 }}
+        >
+            <div className='dinas-img-bg rounded-full flex justify-center absolute p-6'>
+                <Image src={item.imgSrc} alt={item.imgSrc} width={44} height={44} />
+            </div>
+            <div>
+                <Image src={'/images/Dinas/bg-arrow.svg'} alt="arrow-bg" width={85} height={35} />
+            </div>
+            <h3 className='text-2xl text-offwhite font-semibold text-center mt-8'>{item.heading}</h3>
+            <p className='text-base font-normal text-bluish text-center mt-2'>{item.subheading}</p>
+            <span className="text-base font-normal m-0 text-bluish text-center hides">{item.hiddenpara}</span>
+        </motion.div>
+    );
+}
+
 const Dinas = () => {
+    const variantsA = {
+        hidden: { scale: 0.75 },
+        visible: { scale: 1 },
+    }, variantsB = {
+        hidden: { y: 100, opacity: 0 },
+        visible: { y: 0, opacity: 1 },
+    };
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1,
+    });
+
     return (
         <div>
             <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative pt-28' id="dinas-section">
                 <div className="radial-bgone hidden lg:block"></div>
-                <div className='text-center mb-14'>
+                <motion.div
+                    className='text-center mb-14'
+                    variants={variantsA}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 1 }}
+                >
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>Dinas</h3>
                     <p className='text-bluish md:text-lg font-normal leading-8'>HMIF UNSRI memiliki 7 dinas yang masing-masing berkontribusi dalam keberlanjutan organisasi.</p>
-                </div>
-
+                </motion.div>
                 <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-y-20 gap-x-5 mt-32'>
-
-                    {dinasdata.map((items, i) => (
-                        <div className='card-b p-8' key={i}>
-                            <div className='dinas-img-bg rounded-full flex justify-center absolute p-6'>
-                                <Image src={items.imgSrc} alt={items.imgSrc} width={44} height={44} />
-                            </div>
-                            <div>
-                                <Image src={'/images/Dinas/bg-arrow.svg'} alt="arrow-bg" width={85} height={35} />
-                            </div>
-                            <h3 className='text-2xl text-offwhite font-semibold text-center mt-8'>{items.heading}</h3>
-                            <p className='text-base font-normal text-bluish text-center mt-2'>{items.subheading}</p>
-                            <span className="text-base font-normal m-0 text-bluish text-center hides">{items.hiddenpara}</span>
-                        </div>
+                    {dinasdata.map((item, index) => (
+                        <DinasItem item={item} key={index} index={0} />
                     ))}
                 </div>
             </div>
-            <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
+            <div ref={ref}>
+                {inView && (
+                    <motion.div
+                        variants={variantsB}
+                        initial="hidden"
+                        animate="visible"
+                        transition={{ duration: 1 }}
+                    >
+                        <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
+                    </motion.div>
+                )}
+            </div>
         </div>
     )
 }
