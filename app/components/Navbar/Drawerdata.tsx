@@ -8,10 +8,10 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'Home', href: '#home-section', current: false },
-    { name: 'Dinas', href: '#dinas-section', current: false },
-    { name: 'Program Unggulan', href: '#program-section', current: false },
-    { name: 'FAQ', href: '#faq-section', current: false },
+    { name: 'Home', href: '/#home-section', current: false },
+    { name: 'Dinas', href: '/#dinas-section', current: false },
+    { name: 'Program Unggulan', href: '/#program-section', current: false },
+    { name: 'FAQ', href: '/#faq-section', current: false },
 ]
 
 function classNames(...classes: string[]) {
