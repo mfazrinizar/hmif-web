@@ -9,7 +9,7 @@ const Simple = () => {
     const controls1 = useAnimation();
 
     if (inView1) {
-        controls1.start({ y: 0, opacity: 1, transition: { duration: 1 } });
+        controls1.start({ y: 0, opacity: 1, transition: { duration: 0 } });
     }
 
     return (
@@ -20,7 +20,7 @@ const Simple = () => {
             <div className="simplefour"></div>
             <div className="simplefive"></div>
             <div className="mx-auto max-w-5xl py-24 px-6">
-            <motion.div ref={ref1} animate={controls1} initial={{ y: 100, opacity: 0 }}>
+            <motion.div ref={ref1} animate={controls1} initial={{ y: 100, opacity: 0 }} className="my-motion-div">
                 <h3 className="text-center text-offwhite text-3xl lg:text-5xl font-semibold mb-6">Mari Bergabung dalam HMIF UNSRI</h3>
                 <p className="text-center text-bluish text-lg font-normal mb-8">HMIF UNSRI adalah organisasi kemahasiswaan yang bergerak di bidang teknologi informasi, yang bertujuan untuk meningkatkan kualitas akademik, non-akademik, dan kekeluargaan mahasiswa Teknik Informatika FASILKOM UNSRI, serta berkontribusi untuk pengembangan ilmu pengetahuan dan teknologi di Indonesia.</p>
             </motion.div>

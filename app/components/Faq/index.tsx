@@ -37,13 +37,13 @@ const FaqItem = ({ item }: { item: faqdata }) => {
             controls.start({
                 y: 0,
                 opacity: 1,
-                transition: { duration: 1 }
+                transition: { duration: 0 }
             });
         }
     }, [controls, inView]);
 
     return (
-        <motion.div ref={ref} animate={controls} initial={{ y: -100, opacity: 0 }}>
+        <motion.div ref={ref} animate={controls} initial={{ y: -100, opacity: 0 }} className='my-motion-div'>
             <div className="mx-auto w-full max-w-5xl rounded-2xl bg-blue py-8 px-6 mb-5">
                 <Disclosure>
                     {({ open }) => (
@@ -79,7 +79,7 @@ const Faq = () => {
             controls1.start({
                 y: 0,
                 opacity: 1,
-                transition: { duration: 1 }
+                transition: { duration: 0 }
             });
         }
     }, [controls1, inView1]);
@@ -89,7 +89,7 @@ const Faq = () => {
             controls2.start({
                 x: 0,
                 opacity: 1,
-                transition: { duration: 1 }
+                transition: { duration: 0 }
             });
         }
     }, [controls2, inView2]);
@@ -99,7 +99,7 @@ const Faq = () => {
             controls3.start({
                 y: 0,
                 opacity: 1,
-                transition: { duration: 1 }
+                transition: { duration: 0 }
             });
         }
     }, [controls3, inView3]);
@@ -121,13 +121,13 @@ const Faq = () => {
 
 
                     {/* Column-2 */}
-                    <motion.div ref={ref3} animate={controls3} initial={{ y: 100, opacity: 0 }} className="mt-32">
+                    <motion.div ref={ref3} animate={controls3} initial={{ y: 100, opacity: 0 }} className="mt-32 my-motion-div">
                         <Image src={'/images/Faq/faq.svg'} alt="faq-image" width={941} height={379} />
                     </motion.div>
 
                 </div>
             </div>
-            <motion.div ref={ref2} animate={controls2} initial={{ y: 100, opacity: 0 }}>
+            <motion.div ref={ref2} animate={controls2} initial={{ y: 100, opacity: 0 }} className='my-motion-div'>
                 <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
             </motion.div>
         </div>

@@ -48,12 +48,12 @@ const MultipleItems = () => {
 
     const h3Variants = {
         hidden: { y: -50, opacity: 0 },
-        visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+        visible: { y: 0, opacity: 1, transition: { duration: 0 } }
     };
 
     const sliderVariants = {
         hidden: { y: 50, opacity: 0 },
-        visible: { y: 0, opacity: 1, transition: { duration: 0.5 } }
+        visible: { y: 0, opacity: 1, transition: { duration: 0 } }
     };
 
     const settings = {
@@ -99,7 +99,7 @@ const MultipleItems = () => {
 
     return (
         <motion.div
-            className='text-center bg-lightpink mt-56'
+            className='text-center bg-lightpink mt-56 my-motion-div'
             ref={ref}
             animate={controls}
             initial="hidden"

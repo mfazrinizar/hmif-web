@@ -55,11 +55,11 @@ const Footer = () => {
 
   return (
     <motion.div
-      className="relative"
+      className="relative my-motion-div"
       ref={ref}
       animate={controls}
       initial="hidden"
-      transition={{ duration: 1 }}
+      transition={{ duration: 0 }}
       variants={{
         visible: { opacity: 1, scale: 1 },
         hidden: { opacity: 0, scale: 0.75 }

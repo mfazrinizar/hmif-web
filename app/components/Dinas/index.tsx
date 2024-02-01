@@ -74,13 +74,13 @@ const DinasItem: React.FC<DinasItemProps> = ({ item, index }) => {
 
     return (
         <motion.div
-            className='card-b p-8'
+            className='card-b p-8 my-dinas-motion-div'
             key={index}
             ref={ref}
             variants={variants}
             initial="hidden"
             animate={inView ? "show" : "hidden"}
-            transition={{ duration: 0.5 }}
+
         >
             <div className='dinas-img-bg rounded-full flex justify-center absolute p-6'>
                 <Image src={item.imgSrc} alt={item.imgSrc} width={44} height={44} />
@@ -113,11 +113,11 @@ const Dinas = () => {
             <div className='mx-auto max-w-7xl mt-16 px-6 mb-20 relative pt-28' id="dinas-section">
                 <div className="radial-bgone hidden lg:block"></div>
                 <motion.div
-                    className='text-center mb-14'
+                    className='text-center mb-14 my-motion-div'
                     variants={variantsA}
                     initial="hidden"
                     animate="visible"
-                    transition={{ duration: 1 }}
+                    transition={{ duration: 0 }}
                 >
                     <h3 className='text-offwhite text-3xl md:text-5xl font-bold mb-3'>Dinas</h3>
                     <p className='text-bluish md:text-lg font-normal leading-8'>HMIF UNSRI memiliki 7 dinas yang masing-masing berkontribusi dalam keberlanjutan organisasi.</p>
@@ -131,10 +131,11 @@ const Dinas = () => {
             <div ref={ref}>
                 {inView && (
                     <motion.div
+                        className='my-motion-div'
                         variants={variantsB}
                         initial="hidden"
                         animate="visible"
-                        transition={{ duration: 1 }}
+                        transition={{ duration: 0 }}
                     >
                         <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
                     </motion.div>

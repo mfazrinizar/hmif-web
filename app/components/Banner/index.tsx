@@ -21,11 +21,11 @@ const Banner = () => {
     return (
 
         <motion.div
-            className='bg-image relative'
+            className='bg-image relative my-motion-div'
             id="home-section"
             initial={{ opacity: 0, scale: 0.75 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ ease: "easeOut", duration: 1.25 }}
+            transition={{ ease: "easeOut", duration: 0 }}
         >
             <div className='arrowOne'></div>
             <div className='radial-banner hidden lg:block'></div>
@@ -71,10 +71,11 @@ const Banner = () => {
                             <div ref={ref} style={{ marginTop: '20px' }}>
                                 {inView && (
                                     <motion.div
+                                        className='my-motion-div'
                                         variants={variants}
                                         initial="hidden"
                                         animate="visible"
-                                        transition={{ duration: 1 }}
+                                        transition={{ duration: 0 }}
                                     >
                                         <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
                                     </motion.div>

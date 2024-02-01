@@ -43,13 +43,13 @@ const ProgramItem: React.FC<ProgramItemProps & { index: number }> = ({ item, ind
             controls.start({
                 x: 0,
                 opacity: 1,
-                transition: { duration: 1, delay: index * 0.3 }, // delay based on index
+                transition: { duration: 0, delay: index * 0.3 }, // delay based on index
             });
         }
     }, [controls, inView, index]);
 
     return (
-        <motion.div ref={ref} animate={controls} initial={{ x: 100, opacity: 0 }} className="bg-blue py-10 pr-12 pl-6 rounded-lg">
+        <motion.div ref={ref} animate={controls} initial={{ x: 100, opacity: 0 }} className="bg-blue py-10 pr-12 pl-6 rounded-lg my-motion-div">
             <div className="rounded-full gg h-16 w-16 flex items-center justify-center mb-10">
                 <Image src={item.imgSrc} alt={item.imgSrc} width={24} height={30} />
             </div>
@@ -66,8 +66,8 @@ const Programs = () => {
     const controls2 = useAnimation();
     const controls3 = useAnimation();
 
-    if (inView2) controls2.start({ y: 0, opacity: 1, transition: { duration: 1 } });
-    if (inView3) controls3.start({ y: 0, opacity: 1, transition: { duration: 1 } });
+    if (inView2) controls2.start({ y: 0, opacity: 1, transition: { duration: 0 } });
+    if (inView3) controls3.start({ y: 0, opacity: 1, transition: { duration: 0 } });
 
     return (
         <>
@@ -75,7 +75,7 @@ const Programs = () => {
                 <div className="radial-bg hidden lg:block"></div>
                 <div className="grid lg:grid-cols-2 gap-x-4 gap-y-4">
                     {/* Column-1 */}
-                    <motion.div ref={ref3} animate={controls3} initial={{ y: -100, opacity: 0 }}>
+                    <motion.div ref={ref3} animate={controls3} initial={{ y: -100, opacity: 0 }} className="my-motion-div">
                         <h3 className="feature-font text-lg font-semibold mb-4 text-center md:text-start">Program Unggulan</h3>
                         <h2 className="text-offwhite text-3xl lg:text-5xl font-semibold leading-snug mb-6 text-center md:text-start">Program Unggulan yang Menjadi Fondasi Berjalannya Organisasi</h2>
                         <p className="lg:text-lg font-normal text-bluish text-center md:text-start">Program yang menjadi fondasi dan esensi dalam berjalannya organisasi.</p>
@@ -90,7 +90,7 @@ const Programs = () => {
 
                 </div>
             </div>
-            <motion.div ref={ref2} animate={controls2} initial={{ y: 100, opacity: 0 }} className="md:mt-0 mt-10">
+            <motion.div ref={ref2} animate={controls2} initial={{ y: 100, opacity: 0 }} className="md:mt-0 mt-10 my-motion-div">
                 <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
             </motion.div>
         </>
