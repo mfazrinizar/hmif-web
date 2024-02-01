@@ -90,7 +90,7 @@ const Programs = () => {
 
                 </div>
             </div>
-            <motion.div ref={ref2} animate={controls2} initial={{ y: 100, opacity: 0 }}>
+            <motion.div ref={ref2} animate={controls2} initial={{ y: 100, opacity: 0 }} className="md:mt-0 mt-10">
                 <Image src={'/images/Table/Untitled.svg'} alt="ellipse" width={2460} height={102} className="md:mb-40 md:-mt-6" />
             </motion.div>
         </>
