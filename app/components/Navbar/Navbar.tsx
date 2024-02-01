@@ -14,10 +14,10 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'Home', href: '#home-section', current: false },
-    { name: 'Dinas', href: '#dinas-section', current: false },
-    { name: 'Program Unggulan', href: '#program-section', current: false },
-    { name: 'FAQ', href: '#faq-section', current: false },
+    { name: 'Home', href: '/#home-section', current: false },
+    { name: 'Dinas', href: '/#dinas-section', current: false },
+    { name: 'Program Unggulan', href: '/#program-section', current: false },
+    { name: 'FAQ', href: '/#faq-section', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -53,21 +53,25 @@ const Navbar = () => {
                             {/* LOGO */}
 
                             <div className="flex flex-shrink-0 items-center">
-                                <Image
-                                    className="block h-10 w-20px lg:hidden"
-                                    src="/images/Logo/logo.png"
-                                    alt="HMIF-Logo"
-                                    width={48}
-                                    height={48}
-                                />
-                                <Image
-                                    className="hidden h-48px w-48px lg:block"
-                                    src="/images/Logo/logo.png"
-                                    alt="HMIF-Logo"
-                                    width={96}
-                                    height={96}
-                                />
-                                <Link href="#section-home" className="ml-3 text-white text-lg lg:text-2xl font-semibold">
+                                <Link href="/">
+                                    <Image
+                                        className="block h-10 w-20px lg:hidden"
+                                        src="/images/Logo/logo.png"
+                                        alt="HMIF-Logo"
+                                        width={48}
+                                        height={48}
+                                    />
+                                </Link>
+                                <Link href="/">
+                                    <Image
+                                        className="hidden h-48px w-48px lg:block"
+                                        src="/images/Logo/logo.png"
+                                        alt="HMIF-Logo"
+                                        width={96}
+                                        height={96}
+                                    />
+                                </Link>
+                                <Link href="/" className="ml-3 text-white text-lg lg:text-2xl font-semibold">
                                     HMIF UNSRI
                                 </Link>
                             </div>

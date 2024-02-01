@@ -27,10 +27,10 @@ const products: ProductType[] = [
     id: 1,
     section: "Tautan Kami",
     link: [
-      { name: 'Home', href: '#home-section' },
-      { name: 'Dinas', href: '#dinas-section' },
-      { name: 'Program Unggulan', href: '#program-section' },
-      { name: 'FAQ', href: '#faq-section' },
+      { name: 'Home', href: '/' },
+      { name: 'Dinas', href: '/#dinas-section' },
+      { name: 'Program Unggulan', href: '/#program-section' },
+      { name: 'FAQ', href: '/#faq-section' },
     ],
   }
 ]

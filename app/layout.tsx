@@ -9,7 +9,7 @@ export const metadata = {
   title: 'HMIF UNSRI',
   description: 'Situs web resmi HMIF UNSRI',
   icons: {
-    icon: '/logo.svg',
+    icon: '/logo.png',
   },
 }
 

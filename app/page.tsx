@@ -11,15 +11,15 @@ import Faq from './components/Faq/index';
 
 
 export default function Home() {
-  useEffect(() => {
-    setTimeout(() => {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: 'instant' as any,
-      })
-    }, 0);
-  },);// Adjust the delay as needed
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     window.scrollTo({
+  //       top: 0,
+  //       left: 0,
+  //       behavior: 'instant' as any,
+  //     })
+  //   }, 0);
+  // },);
 
 
   return (
